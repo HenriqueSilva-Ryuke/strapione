@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "category_noticias",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "CategoryPortfólio"
+    "singularName": "category-noticia",
+    "pluralName": "category-noticias",
+    "displayName": "CategoryNotícia"
   },
   "options": {
     "draftAndPublish": false
@@ -15,15 +15,6 @@
     }
   },
   "attributes": {
-    "title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "required": true
-    },
     "slug": {
       "type": "uid",
       "pluginOptions": {
@@ -33,11 +24,20 @@
       },
       "targetField": "title"
     },
-    "portfolios": {
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "noticias": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::portfolio.portfolio",
-      "mappedBy": "category"
+      "target": "api::noticia.noticia",
+      "mappedBy": "category_noticia"
     }
   }
 }

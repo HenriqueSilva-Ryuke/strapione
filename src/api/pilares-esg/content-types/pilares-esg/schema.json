@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "pilares_esgs",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "CategoryPortfólio"
+    "singularName": "pilares-esg",
+    "pluralName": "pilares-esgs",
+    "displayName": "Pilares ESG"
   },
   "options": {
     "draftAndPublish": false
@@ -15,8 +15,26 @@
     }
   },
   "attributes": {
+    "icon": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": false
+    },
     "title": {
       "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -32,12 +50,6 @@
         }
       },
       "targetField": "title"
-    },
-    "portfolios": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::portfolio.portfolio",
-      "mappedBy": "category"
     }
   }
 }

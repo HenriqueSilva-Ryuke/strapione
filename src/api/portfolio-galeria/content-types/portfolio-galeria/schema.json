@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolio_galerias",
+  "info": {
+    "singularName": "portfolio-galeria",
+    "pluralName": "portfolio-galerias",
+    "displayName": "Portfólio Galeria"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "category_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category-project.category-project",
+      "inversedBy": "portfolio_galerias"
+    }
+  }
+}

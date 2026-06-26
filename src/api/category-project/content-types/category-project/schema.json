@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "category_projects",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "CategoryPortfólio"
+    "singularName": "category-project",
+    "pluralName": "category-projects",
+    "displayName": "CategoryProject"
   },
   "options": {
     "draftAndPublish": false
@@ -33,11 +33,17 @@
       },
       "targetField": "title"
     },
-    "portfolios": {
+    "projectos": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::portfolio.portfolio",
-      "mappedBy": "category"
+      "target": "api::projecto.projecto",
+      "mappedBy": "category_project"
+    },
+    "portfolio_galerias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portfolio-galeria.portfolio-galeria",
+      "mappedBy": "category_project"
     }
   }
 }
